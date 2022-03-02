@@ -1,0 +1,16 @@
+/**
+ * This is auto generated file from postman collection
+ */
+
+/* eslint-disable */
+
+
+{{#each dirOrFile}}
+import * as {{@key}} from './{{this}}';
+{{/each}}
+
+export {
+    {{#each dirOrFile}}
+        {{@key}},
+    {{/each}}
+};

@@ -1,0 +1,33 @@
+/* eslint-disable */
+
+{{{HTTP_INSTANCE_IMPORT}}}
+
+/**
+ * This is auto generated file from postman collection
+ */
+
+
+
+{{#each requests }}
+
+{{#ifEquals this.method 'get' }}export const {{this.name}} = ( {{#if this.query_params}}{{this.query_params}} ,{{/if}}config = null) => {
+    return {{this.HTTP_INSTANCE}}.{{this.method}}(`{{this.query_url}}`, config);
+};
+{{/ifEquals}}
+{{#ifEquals this.method 'post' }}export const {{this.name}} = ( {{#if this.query_params}}{{this.query_params}} ,{{/if}}data = null, config = null) => {
+    return {{this.HTTP_INSTANCE}}.{{this.method}}(`{{this.query_url}}`, data, config);
+};
+{{/ifEquals}}
+{{#ifEquals this.method 'patch' }}export const {{this.name}} = ( {{#if this.query_params}}{{this.query_params}} ,{{/if}}data = null, config = null) => {
+    return {{this.HTTP_INSTANCE}}.{{this.method}}(`{{this.query_url}}`, data, config);
+};
+{{/ifEquals}}
+{{#ifEquals this.method 'put' }}export const {{this.name}} = ( {{#if this.query_params}}{{this.query_params}} ,{{/if}}data = null, config = null) => {
+    return {{this.HTTP_INSTANCE}}.{{this.method}}(`{{this.query_url}}`, data, config);
+};
+{{/ifEquals}}
+{{#ifEquals this.method 'delete' }}export const {{this.name}} = ( {{#if this.query_params}}{{this.query_params}} ,{{/if}}data = null, config = null) => {
+    return {{this.HTTP_INSTANCE}}.{{this.method}}(`{{this.query_url}}`, data, config);
+};
+{{/ifEquals}}
+{{/each}}

@@ -1,0 +1,11 @@
+{{http_instance}}
+
+/**
+ * This is auto generated file from postman collection
+ */
+
+/* eslint-disable */
+
+export const {{name}} = ({{#if query_params}} {{query_params}} ,{{/if}} config = null) => {
+    return Http.instance.{{method}}(`{{query_url}}`, config);
+};
